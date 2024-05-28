@@ -1,7 +1,14 @@
 .ux{
-    color: blueviolet;
+    color: blue;
     background-color: blueviolet;
+}
+.dev-frontend{
+    color: red;
 }
 .InProgressClass{
     background-color: blueviolet;
+    font-style: italic;
+}
+.done{
+    color: red;
 }

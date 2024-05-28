@@ -19,7 +19,7 @@ async function getFirebase() {
         inprogress:[]
     }
     
-    firebase2.done = firebaseArray.filter( a => a.status === 'done');
+    firebase2.done = firebaseArray.filter( a => a.status.toLowerCase() === 'done');
     firebase2.todo = firebaseArray.filter( a => a.status === 'to do');
     firebase2.inprogress = firebaseArray.filter( a => a.status.toLowerCase() === 'in progress');
     

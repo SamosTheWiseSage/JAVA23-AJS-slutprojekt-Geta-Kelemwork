@@ -1,6 +1,7 @@
 import Done from "./Done"
 import ToDo from "./ToDo"
 import InProgress from "./InProgress"
+import DisplayProgress from "./DisplayProgress";
 import getFirebase from "../utils/Fetch";
 import SubmitButton from "./SubmitButton";
 import { useEffect, useState } from "react";
@@ -35,8 +36,10 @@ export function App() {
     return(
         <div>
          <SubmitButton setSubmitButton={setSubmitButton}/>
-           <Done/>
+           {/* <Done/> */}
            {/* <ToDo/> */}
+           {firebase.done.map(taskDone => <Done key ={taskDone.id} 
+        taskDone={taskDone}/>)}
            {firebase.inprogress.map(taskInProgress => <InProgress key ={taskInProgress.id} 
         taskInProgress={taskInProgress}/>)}
            {firebase.todo.map(task => <ToDo key ={task.id} 

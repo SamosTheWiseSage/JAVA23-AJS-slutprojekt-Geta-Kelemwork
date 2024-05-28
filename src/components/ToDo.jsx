@@ -36,9 +36,9 @@ function ToDo({task}) {
     return (
          <div>
             <h1>to Do</h1>
+            <h2>category:{category}</h2>
             <h3>assignment:{assignment}</h3>
-            <h3>category:{category}</h3>
-            <h3>status:{status}</h3> 
+            <h2>status:{status}</h2> 
             <h3>assigned:{assigned}</h3>
             <form onSubmit={handleButtonSubmit}>
             <input type="text" placeholder="" onChange={handleButtonChange}></input> 
