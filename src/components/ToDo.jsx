@@ -31,17 +31,18 @@ function ToDo({task}) {
           
           fetch(url, options)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => console.log(data))
+            .catch(error => console.log(error));
     }
     return (
          <div>
             <h1>to Do</h1>
-            <h2>category:{category}</h2>
-            <h3>assignment:{assignment}</h3>
-            <h2>status:{status}</h2> 
             <h3>assigned:{assigned}</h3>
+            <h3>assignment:{assignment}</h3>
+            <h2 className={category.replace(' ', '-')}>category:{category}</h2>
+            <h3>status:{status}</h3> 
             <form onSubmit={handleButtonSubmit}>
-            <input type="text" placeholder="" onChange={handleButtonChange}></input> 
+            <input type="text" placeholder="" required onChange={handleButtonChange}></input> 
             <button>Assing{">>"}</button>
       </form></div> );
 }

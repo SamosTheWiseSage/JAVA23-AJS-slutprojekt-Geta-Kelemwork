@@ -47,7 +47,7 @@ function SubmitButton({setSubmitButton}) {
         })
     }
     return ( <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Task" onChange={handleChange}/>
+        <input type="text" placeholder="Task" required onChange={handleChange}/>
         <select name="" id="" onChange={handleOptionOne}>
             <option value='ux'>ux</option>
             <option value='dev backend'>dev backend</option>

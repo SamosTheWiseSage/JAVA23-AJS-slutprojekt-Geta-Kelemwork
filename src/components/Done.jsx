@@ -21,7 +21,7 @@ function Done({taskDone}) {
       <h1>Done</h1>
       <h3>assigned: {assigned}</h3>
       <h3>assignment: {assignment}</h3>
-      <h3>category: {category}</h3>
+      <h2 className={category.replace(' ', '-')}>category: {category}</h2>
       <h3>status: {status}</h3>
 <button onClick={handleButtonDone}>Remove X</button>
     </div> );

@@ -29,11 +29,11 @@ function InProgress({taskInProgress}) {
 
     }
   
-    return ( <div className="InProgressClass">
-        <h1 className={category}>In Progress</h1>
+    return ( <div>
+        <h1>In Progress</h1>
         <h3>assigned: {assigned}</h3>
         <h3>assignment: {assignment}</h3>
-        <h2>category: {category}</h2>
+        <h2 className={category.replace(' ', '-')}>category: {category}</h2>
         <h3>status: {status}</h3>
         <button onClick={handleChangeButton}>Done!</button>
         </div> );
