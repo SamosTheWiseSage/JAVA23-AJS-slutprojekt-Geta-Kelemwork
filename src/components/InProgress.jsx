@@ -1,6 +1,4 @@
-import ToDo from "./ToDo";
-
-function InProgress({taskInProgress, callBackView}) { 
+function InProgress({taskInProgress, callBackView,setStatus}) { 
     const {assigned, assignment, category, status,id} = taskInProgress
 
 
@@ -25,7 +23,8 @@ function InProgress({taskInProgress, callBackView}) {
           
           fetch(url, options)
             .then(response => response.json())
-            .then(data => callBackView() );
+            .then(data => callBackView() )
+            .catch(error => setStatus('error'));
 
     }
   

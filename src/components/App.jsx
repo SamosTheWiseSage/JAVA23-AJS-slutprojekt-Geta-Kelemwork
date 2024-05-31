@@ -38,14 +38,14 @@ export function App() {
 
     return (
         <div>
-            <SubmitButton setSubmitButton={setSubmitButton} callBackView={callBackView}  />
+            <SubmitButton setSubmitButton={setSubmitButton} callBackView={callBackView} setStatus={setStatus}  />
             <br />
             {status === 'error' && <Error />}
-            {status === 'success' && firebase.done.map(taskDone => <Done key={taskDone.id} taskDone={taskDone} callBackView={callBackView}   />)}
+            {status === 'success' && firebase.done.map(taskDone => <Done key={taskDone.id} taskDone={taskDone} callBackView={callBackView} setStatus={setStatus}   />)}
             {status === 'success' && firebase.inprogress.map(taskInProgress => <InProgress key={taskInProgress.id}
-                taskInProgress={taskInProgress} callBackView={callBackView}  />)}
+                taskInProgress={taskInProgress} callBackView={callBackView} setStatus={setStatus}  />)}
             {status === 'success' && firebase.todo.map(task => <ToDo key={task.id} 
-                task={task} callBackView={callBackView} />)}
+                task={task} callBackView={callBackView} setStatus={setStatus} />)}
         </div>
     )
 }

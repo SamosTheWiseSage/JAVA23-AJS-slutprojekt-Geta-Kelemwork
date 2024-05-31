@@ -1,4 +1,4 @@
-function ToDo({task, callBackView}) {
+function ToDo({task, callBackView, setStatus}) {
     let newStatus = ''
     console.log(task)
     const {assigned, assignment, category, status, id} = task
@@ -33,7 +33,7 @@ function ToDo({task, callBackView}) {
             .then(response => response.json())
             .then(()=> { callBackView()})
             
-            .catch(error => console.log(error));
+            .catch(error => setStatus('error'));
     }
     return (
          <div className="to-do">

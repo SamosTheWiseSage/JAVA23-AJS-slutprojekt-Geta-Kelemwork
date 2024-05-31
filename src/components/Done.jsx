@@ -1,4 +1,4 @@
-function Done({taskDone, callBackView}) {
+function Done({taskDone, callBackView, setStatus}) {
   const {assigned, assignment, category, status,id} = taskDone
 
     function handleButtonDone(event) {
@@ -14,7 +14,8 @@ function Done({taskDone, callBackView}) {
           
           fetch(url, options)
             .then(response => response.json())
-            .then(data => callBackView());
+            .then(data => callBackView())
+            .catch(error => setStatus('error'));
     }
     return ( 
     <div className="done"> 

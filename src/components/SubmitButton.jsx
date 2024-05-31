@@ -1,5 +1,5 @@
 
-function SubmitButton({setSubmitButton, callBackView}) {
+function SubmitButton({setSubmitButton, callBackView,setStatus}) {
     let newAssignment = '';
     let option = 'ux'
 
@@ -43,7 +43,8 @@ function SubmitButton({setSubmitButton, callBackView}) {
               
               fetch(url, options)
                 .then(response => response.json())
-                .then(data => callBackView());
+                .then(data => callBackView())
+                .catch(error => setStatus('error'));
         })
     }
     return ( <form onSubmit={handleSubmit}>
