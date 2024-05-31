@@ -1,12 +1,12 @@
 .ux{
-    color: deeppink;
+    background-color: deeppink;
 
 }
 .dev-backend{
-    color: goldenrod;
+    background-color: goldenrod;
 }
 .dev-frontend{
-    color: blueviolet;
+    background-color: blueviolet;
 }
 .done{
     background-color: green;

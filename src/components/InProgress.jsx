@@ -1,6 +1,6 @@
 import ToDo from "./ToDo";
 
-function InProgress({taskInProgress}) { 
+function InProgress({taskInProgress, callBackView}) { 
     const {assigned, assignment, category, status,id} = taskInProgress
 
 
@@ -15,17 +15,17 @@ function InProgress({taskInProgress}) {
           
           
           const options = {
-            method: "PATCH", //Metoden som ska användas
-            body: JSON.stringify(bodyContent), //Gör om datan till json
+            method: "PATCH", 
+            body: JSON.stringify(bodyContent), 
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
-            }//Header-objektet
+            }
           };
           
           
           fetch(url, options)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => callBackView() );
 
     }
   

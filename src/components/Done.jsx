@@ -1,11 +1,11 @@
-function Done({taskDone}) {
+function Done({taskDone, callBackView}) {
   const {assigned, assignment, category, status,id} = taskDone
 
     function handleButtonDone(event) {
         event.preventDefault();
         const url = `https://java23-ajs-slutprojekt-default-rtdb.europe-west1.firebasedatabase.app/assignments/${id}.json`
           const options = {
-            method: "DELETE", //Metoden som ska användas
+            method: "DELETE", 
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
             },
@@ -14,7 +14,7 @@ function Done({taskDone}) {
           
           fetch(url, options)
             .then(response => response.json())
-            .then(data => console.log(data));
+            .then(data => callBackView());
     }
     return ( 
     <div className="done"> 
