@@ -1,10 +1,85 @@
 .ux{
-    color: blue;
+    color: deeppink;
 
 }
 .dev-backend{
-    color: green;
+    color: goldenrod;
 }
 .dev-frontend{
-    color: red;
+    color: blueviolet;
 }
+.done{
+    background-color: green;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30%;
+    border: 3px solid black;
+    border-radius: 30%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 88%;
+    font-weight:lighter;
+  display: inline-block;
+  border-radius: 12px; 
+}
+.In-progress{
+    background-color: yellow;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30%;
+    border: 3px solid black;
+    border-radius: 30%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 88%;
+    font-weight:lighter;
+  display: inline-block;
+  border-radius: 12px; 
+}
+.to-do{
+    background-color: red;
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30%;
+    border: 3px solid black;
+    border-radius: 30%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 88%;
+    font-weight:lighter;
+  display: inline-block;
+  border-radius: 12px; 
+}
+/* .appearance{
+    justify-content: center;
+    display: flex;
+    gap: 10px;
+    padding: 10%;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    border: 30%;
+    border: 3px solid black;
+    border-radius: 30%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-size: 88%;
+    font-weight:lighter;
+  display: inline-block;
+  border-radius: 12px; 
+} */

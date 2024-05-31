@@ -29,7 +29,7 @@ function InProgress({taskInProgress}) {
 
     }
   
-    return ( <div>
+    return ( <div className="In-progress">
         <h1>In Progress</h1>
         <h3>assigned: {assigned}</h3>
         <h3>assignment: {assignment}</h3>

@@ -17,7 +17,7 @@ function Done({taskDone}) {
             .then(data => console.log(data));
     }
     return ( 
-    <div> 
+    <div className="done"> 
       <h1>Done</h1>
       <h3>assigned: {assigned}</h3>
       <h3>assignment: {assignment}</h3>

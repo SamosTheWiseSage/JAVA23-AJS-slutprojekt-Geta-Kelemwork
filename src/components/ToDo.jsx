@@ -35,7 +35,7 @@ function ToDo({task}) {
             .catch(error => console.log(error));
     }
     return (
-         <div>
+         <div className="to-do">
             <h1>to Do</h1>
             <h3>assigned:{assigned}</h3>
             <h3>assignment:{assignment}</h3>
